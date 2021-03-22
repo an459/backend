@@ -23,14 +23,14 @@ $password = safe("password") ;
 if (! adduser ($username, $password) ) 
 {
 	echo "Username already exists. Try again.<br>"; 
-	header ( "refresh: 2 ; url = login.html ");
+	header ( "refresh: 2 ; url = register.html ");
 	exit();
 }
 else 								
 {
 	echo "Account created.<br>";
 	$_SESSION ["logged"] = true ;
-	$_SESSION ["ucid"] = $ucid ;
+	$_SESSION ["username"] = $username ;
 	header ( "refresh: 2 ; url = landingpage.php ");
 	exit();
 }

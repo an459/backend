@@ -30,7 +30,7 @@ else
 {
 	echo "<br>Valid cred." ; 
 	$_SESSION ["logged"] = true ;
-	$_SESSION ["ucid"] = $ucid ;
+	$_SESSION ["username"] = $username ;
 	header ( "refresh: 2 ; url = landingpage.php ");
 	exit();
 }
